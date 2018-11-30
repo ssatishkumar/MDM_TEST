@@ -100,25 +100,12 @@ public class ProceesInfoPage {
 		Wait.until(function);
 		Sync.waitForSeconds(Constants.WAIT_6);
 		Textbox.click("Click Request Id Text Box", txtboxRequestId);
-//		Textbox.clear("Clear Request Id Text Box", txtboxRequestId);
 		Sync.waitForSeconds(Constants.WAIT_1);
 		Textbox.enterValue("Enter Request Id", txtboxRequestId, strValue);
-		
-	/*	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-
-		//get current date time with Date()
-		Date date = new Date();
-
-		// Now format the date
-		String dateFormatted= dateFormat.format(date);*/
 		Sync.waitForSeconds(Constants.WAIT_2);
 		Sync.waitForSeconds(Constants.WAIT_2);
 		driver.findElement(By.xpath("(.//*[@class='btn mx-button mx-dateinput-select-button'])[1]")).click();
 		driver.findElement(By.xpath(".//*[@aria-selected='true']/span")).click();
-//		Textbox.click("Enter Requested Date", txtboxRequestedDate);
-//		Textbox.clear("Clear Request Id Text Box", txtboxRequestId);
-//		Textbox.jsEnterValue("Enter Requested Date", driver, txtboxRequestedDate, dateFormatted);
-		
 		Sync.waitForSeconds(Constants.WAIT_5);
 		driver.findElement(By.xpath(".//*[@class='glyphicon glyphicon-search']")).click();
 	}

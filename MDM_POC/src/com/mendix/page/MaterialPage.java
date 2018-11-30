@@ -207,6 +207,7 @@ public class MaterialPage {
 
 	public boolean clickMaterial(String strPageName) throws InterruptedException{
 		Sync.waitForSeconds(Constants.WAIT_6);
+//		Sync.fluentWaitForObject(driver, textMaterial, By.xpath("//a[contains(text(),'Materials')]"));
 		if(Button.verifyObject(textMaterial)){
 			Sync.waitForObject(driver ,"Materials", textMaterial);
 			Button.NewmouseOver("Materials", driver, textMaterial);
@@ -297,6 +298,7 @@ public class MaterialPage {
 		Sync.waitForSeconds(Constants.WAIT_2);
 		Textbox.click("Click Gross Weight Base UOM", txtBoxGrossWeightUOM);
 		Sync.waitForSeconds(Constants.WAIT_1);
+		Sync.waitForObject(driver, "Wait for Gross Weight Base UOM TextBox", txtBoxGrossWeightUOM);
 		return Textbox.enterValue("Enter Gross Weight Base UOM", txtBoxGrossWeightUOM, strValue);
 	}
 
@@ -466,6 +468,7 @@ public class MaterialPage {
 		Sync.waitForSeconds(Constants.WAIT_2);	}
 
 	public  String getGlobalId() throws FileNotFoundException, IOException {
+		Sync.waitForSeconds(Constants.WAIT_3);
 		Sync.waitForObject(driver, "Wait for Global Material Id", driver.findElement(By.xpath("//*[text()='Global Material ID']/../../../../../../table[2]/tbody/tr/td[4]/div")));
 		String globalId=driver.findElement(By.xpath("//*[text()='Global Material ID']/../../../../../../table[2]/tbody/tr/td[4]/div")).getText();
 		System.out.println(globalId);
@@ -479,7 +482,7 @@ public class MaterialPage {
 		Sync.waitForObject(driver, "Wait until the Material appears", btnFullMaterailData);
 		return Button.click("Click Materials Menu", btnFullMaterailData);
 	}
-	
+
 	public  String getMaterial_Number() throws FileNotFoundException, IOException {
 		Sync.waitUntilObjectDisappears(driver, "Wait for Materials", By.xpath((".//*[@id='mxui_widget_Progress_0']/div[2]")));
 		String materialNum=driver.findElement(By.xpath("//*[text()='Material number']/../../../../../../table[2]/tbody/tr[2]/td[1]/div")).getText();
@@ -489,6 +492,6 @@ public class MaterialPage {
 		return materialNum;
 	}
 
-	
+
 
 }

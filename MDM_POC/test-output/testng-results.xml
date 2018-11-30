@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="1" ignored="50" total="63" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Create Material" duration-ms="331009" started-at="2018-11-30T19:51:57Z" finished-at="2018-11-30T19:57:28Z">
+  <suite name="Create Material" duration-ms="333932" started-at="2018-11-30T20:56:51Z" finished-at="2018-11-30T21:02:25Z">
     <groups>
     </groups>
-    <test name="HeiPort_Login_LDR" duration-ms="18569" started-at="2018-11-30T19:51:57Z" finished-at="2018-11-30T19:52:16Z">
+    <test name="HeiPort_Login_LDR" duration-ms="18452" started-at="2018-11-30T20:56:51Z" finished-at="2018-11-30T20:57:09Z">
       <class name="com.mendix.test.LoginScript">
-        <test-method status="PASS" signature="tasKill()[pri:0, instance:com.mendix.test.LoginScript@59e5ddf]" name="tasKill" duration-ms="33" started-at="2018-11-30T19:51:57Z" finished-at="2018-11-30T19:51:57Z">
+        <test-method status="PASS" signature="tasKill()[pri:0, instance:com.mendix.test.LoginScript@59e5ddf]" name="tasKill" duration-ms="31" started-at="2018-11-30T20:56:51Z" finished-at="2018-11-30T20:56:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tasKill -->
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.mendix.test.LoginScript@59e5ddf]" name="openBrowser" duration-ms="4934" started-at="2018-11-30T19:51:57Z" finished-at="2018-11-30T19:52:02Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.mendix.test.LoginScript@59e5ddf]" name="openBrowser" duration-ms="3599" started-at="2018-11-30T20:56:51Z" finished-at="2018-11-30T20:56:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="loginAsLDR()[pri:0, instance:com.mendix.test.LoginScript@59e5ddf]" name="loginAsLDR" duration-ms="13585" started-at="2018-11-30T19:52:02Z" finished-at="2018-11-30T19:52:16Z">
+        <test-method status="PASS" signature="loginAsLDR()[pri:0, instance:com.mendix.test.LoginScript@59e5ddf]" name="loginAsLDR" duration-ms="14806" started-at="2018-11-30T20:56:55Z" finished-at="2018-11-30T20:57:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsLDR -->
       </class> <!-- com.mendix.test.LoginScript -->
     </test> <!-- HeiPort_Login_LDR -->
-    <test name="Material_Create_Fill    in questionnaire" duration-ms="30479" started-at="2018-11-30T19:52:16Z" finished-at="2018-11-30T19:52:46Z">
+    <test name="Material_Create_Fill    in questionnaire" duration-ms="22773" started-at="2018-11-30T20:57:09Z" finished-at="2018-11-30T20:57:32Z">
       <class name="com.mendix.test.MaterialScript">
-        <test-method status="PASS" signature="Material_Create_Fill_In_Questionnaire()[pri:0, instance:com.mendix.test.MaterialScript@7e2d773b]" name="Material_Create_Fill_In_Questionnaire" duration-ms="30477" started-at="2018-11-30T19:52:16Z" finished-at="2018-11-30T19:52:46Z">
+        <test-method status="PASS" signature="Material_Create_Fill_In_Questionnaire()[pri:0, instance:com.mendix.test.MaterialScript@7e2d773b]" name="Material_Create_Fill_In_Questionnaire" duration-ms="22771" started-at="2018-11-30T20:57:09Z" finished-at="2018-11-30T20:57:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Material_Create_Fill_In_Questionnaire -->
       </class> <!-- com.mendix.test.MaterialScript -->
     </test> <!-- Material_Create_Fill    in questionnaire -->
-    <test name="Material_Create_Fill_In_Data" duration-ms="75529" started-at="2018-11-30T19:52:46Z" finished-at="2018-11-30T19:54:02Z">
+    <test name="Material_Create_Fill_In_Data" duration-ms="74561" started-at="2018-11-30T20:57:32Z" finished-at="2018-11-30T20:58:47Z">
       <class name="com.mendix.test.MaterialScript">
-        <test-method status="PASS" signature="Material_Create_Fill_In_Data(java.util.Map)[pri:0, instance:com.mendix.test.MaterialScript@2353b3e6]" name="Material_Create_Fill_In_Data" duration-ms="74950" started-at="2018-11-30T19:52:47Z" data-provider="CreateMaterial_Fill_In" finished-at="2018-11-30T19:54:02Z">
+        <test-method status="PASS" signature="Material_Create_Fill_In_Data(java.util.Map)[pri:0, instance:com.mendix.test.MaterialScript@2353b3e6]" name="Material_Create_Fill_In_Data" duration-ms="73993" started-at="2018-11-30T20:57:33Z" data-provider="CreateMaterial_Fill_In" finished-at="2018-11-30T20:58:47Z">
           <params>
             <param index="0">
               <value>
@@ -44,13 +44,13 @@
         </test-method> <!-- Material_Create_Fill_In_Data -->
       </class> <!-- com.mendix.test.MaterialScript -->
     </test> <!-- Material_Create_Fill_In_Data -->
-    <test name="Process_Information_Check" duration-ms="36313" started-at="2018-11-30T19:54:02Z" finished-at="2018-11-30T19:54:38Z">
+    <test name="Process_Information_Check" duration-ms="40205" started-at="2018-11-30T20:58:47Z" finished-at="2018-11-30T20:59:27Z">
       <class name="com.mendix.test.MaterialScript">
-        <test-method status="PASS" signature="Process_Information_Check(java.util.Map)[pri:0, instance:com.mendix.test.MaterialScript@fad74ee]" name="Process_Information_Check" duration-ms="36275" started-at="2018-11-30T19:54:02Z" data-provider="Process_Information_Check" finished-at="2018-11-30T19:54:38Z">
+        <test-method status="PASS" signature="Process_Information_Check(java.util.Map)[pri:0, instance:com.mendix.test.MaterialScript@fad74ee]" name="Process_Information_Check" duration-ms="40175" started-at="2018-11-30T20:58:47Z" data-provider="Process_Information_Check" finished-at="2018-11-30T20:59:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1377655, GlobalId=400230, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}]]>
+                <![CDATA[{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1377657, GlobalId=400230, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}]]>
               </value>
             </param>
           </params>
@@ -59,25 +59,25 @@
         </test-method> <!-- Process_Information_Check -->
       </class> <!-- com.mendix.test.MaterialScript -->
     </test> <!-- Process_Information_Check -->
-    <test name="HeiPort_Login_GDA" duration-ms="14765" started-at="2018-11-30T19:54:38Z" finished-at="2018-11-30T19:54:53Z">
+    <test name="HeiPort_Login_GDA" duration-ms="15879" started-at="2018-11-30T20:59:27Z" finished-at="2018-11-30T20:59:43Z">
       <class name="com.mendix.test.LoginScript">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.mendix.test.LoginScript@3e57cd70]" name="openBrowser" duration-ms="4538" started-at="2018-11-30T19:54:38Z" finished-at="2018-11-30T19:54:42Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.mendix.test.LoginScript@3e57cd70]" name="openBrowser" duration-ms="4045" started-at="2018-11-30T20:59:27Z" finished-at="2018-11-30T20:59:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="loginAsGDA()[pri:0, instance:com.mendix.test.LoginScript@3e57cd70]" name="loginAsGDA" duration-ms="10225" started-at="2018-11-30T19:54:42Z" finished-at="2018-11-30T19:54:53Z">
+        <test-method status="PASS" signature="loginAsGDA()[pri:0, instance:com.mendix.test.LoginScript@3e57cd70]" name="loginAsGDA" duration-ms="11832" started-at="2018-11-30T20:59:31Z" finished-at="2018-11-30T20:59:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsGDA -->
       </class> <!-- com.mendix.test.LoginScript -->
     </test> <!-- HeiPort_Login_GDA -->
-    <test name="Material_Create_Review_Global_Data_Approve_GDA" duration-ms="68095" started-at="2018-11-30T19:54:53Z" finished-at="2018-11-30T19:56:01Z">
+    <test name="Material_Create_Review_Global_Data_Approve_GDA" duration-ms="70470" started-at="2018-11-30T20:59:43Z" finished-at="2018-11-30T21:00:53Z">
       <class name="com.mendix.test.MaterialScript">
-        <test-method status="PASS" signature="Material_Create_Review_Global_Data_Approve_GDA(java.util.Map)[pri:0, instance:com.mendix.test.MaterialScript@6b9651f3]" name="Material_Create_Review_Global_Data_Approve_GDA" duration-ms="68062" started-at="2018-11-30T19:54:53Z" data-provider="Process_Information_Check" finished-at="2018-11-30T19:56:01Z">
+        <test-method status="PASS" signature="Material_Create_Review_Global_Data_Approve_GDA(java.util.Map)[pri:0, instance:com.mendix.test.MaterialScript@6b9651f3]" name="Material_Create_Review_Global_Data_Approve_GDA" duration-ms="70446" started-at="2018-11-30T20:59:43Z" data-provider="Process_Information_Check" finished-at="2018-11-30T21:00:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1377655, GlobalId=400230, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}]]>
+                <![CDATA[{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1377657, GlobalId=400230, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}]]>
               </value>
             </param>
           </params>
@@ -86,13 +86,13 @@
         </test-method> <!-- Material_Create_Review_Global_Data_Approve_GDA -->
       </class> <!-- com.mendix.test.MaterialScript -->
     </test> <!-- Material_Create_Review_Global_Data_Approve_GDA -->
-    <test name="Process_Information_Check_Syndication" duration-ms="32710" started-at="2018-11-30T19:56:01Z" finished-at="2018-11-30T19:56:33Z">
+    <test name="Process_Information_Check_Syndication" duration-ms="32372" started-at="2018-11-30T21:00:53Z" finished-at="2018-11-30T21:01:26Z">
       <class name="com.mendix.test.MaterialScript">
-        <test-method status="PASS" signature="Process_Information_Check(java.util.Map)[pri:0, instance:com.mendix.test.MaterialScript@7ce6a65d]" name="Process_Information_Check" duration-ms="32686" started-at="2018-11-30T19:56:01Z" data-provider="Process_Information_Check" finished-at="2018-11-30T19:56:33Z">
+        <test-method status="PASS" signature="Process_Information_Check(java.util.Map)[pri:0, instance:com.mendix.test.MaterialScript@7ce6a65d]" name="Process_Information_Check" duration-ms="32329" started-at="2018-11-30T21:00:53Z" data-provider="Process_Information_Check" finished-at="2018-11-30T21:01:26Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1377655, GlobalId=400230, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}]]>
+                <![CDATA[{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1377657, GlobalId=400230, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}]]>
               </value>
             </param>
           </params>
@@ -101,25 +101,25 @@
         </test-method> <!-- Process_Information_Check -->
       </class> <!-- com.mendix.test.MaterialScript -->
     </test> <!-- Process_Information_Check_Syndication -->
-    <test name="HeiPort_Login_LDR_Syndication" duration-ms="14800" started-at="2018-11-30T19:56:34Z" finished-at="2018-11-30T19:56:48Z">
+    <test name="HeiPort_Login_LDR_Syndication" duration-ms="18991" started-at="2018-11-30T21:01:26Z" finished-at="2018-11-30T21:01:45Z">
       <class name="com.mendix.test.LoginScript">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.mendix.test.LoginScript@42d8062c]" name="openBrowser" duration-ms="4086" started-at="2018-11-30T19:56:34Z" finished-at="2018-11-30T19:56:38Z">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.mendix.test.LoginScript@42d8062c]" name="openBrowser" duration-ms="3979" started-at="2018-11-30T21:01:26Z" finished-at="2018-11-30T21:01:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="loginAsLDR()[pri:0, instance:com.mendix.test.LoginScript@42d8062c]" name="loginAsLDR" duration-ms="10711" started-at="2018-11-30T19:56:38Z" finished-at="2018-11-30T19:56:48Z">
+        <test-method status="PASS" signature="loginAsLDR()[pri:0, instance:com.mendix.test.LoginScript@42d8062c]" name="loginAsLDR" duration-ms="15010" started-at="2018-11-30T21:01:30Z" finished-at="2018-11-30T21:01:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsLDR -->
       </class> <!-- com.mendix.test.LoginScript -->
     </test> <!-- HeiPort_Login_LDR_Syndication -->
-    <test name="Material_Create_Syndication_Check" duration-ms="39648" started-at="2018-11-30T19:56:48Z" finished-at="2018-11-30T19:57:28Z">
+    <test name="Material_Create_Syndication_Check" duration-ms="40124" started-at="2018-11-30T21:01:45Z" finished-at="2018-11-30T21:02:25Z">
       <class name="com.mendix.test.LoginScript">
-        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.mendix.test.LoginScript@42d8062c]" name="setup" is-config="true" duration-ms="94" started-at="2018-11-30T19:51:57Z" finished-at="2018-11-30T19:51:57Z">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.mendix.test.LoginScript@42d8062c]" name="setup" is-config="true" duration-ms="82" started-at="2018-11-30T20:56:51Z" finished-at="2018-11-30T20:56:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2e86807a]]>
+                <![CDATA[org.testng.TestRunner@43b5021c]]>
               </value>
             </param>
           </params>
@@ -128,11 +128,11 @@
         </test-method> <!-- setup -->
       </class> <!-- com.mendix.test.LoginScript -->
       <class name="com.mendix.test.MaterialScript">
-        <test-method status="FAIL" signature="Material_Create_Syndication_Check(java.util.Map)[pri:0, instance:com.mendix.test.MaterialScript@5bcea91b]" name="Material_Create_Syndication_Check" duration-ms="39601" started-at="2018-11-30T19:56:48Z" data-provider="Process_Information_Check" finished-at="2018-11-30T19:57:28Z">
+        <test-method status="FAIL" signature="Material_Create_Syndication_Check(java.util.Map)[pri:0, instance:com.mendix.test.MaterialScript@5bcea91b]" name="Material_Create_Syndication_Check" duration-ms="40098" started-at="2018-11-30T21:01:45Z" data-provider="Process_Information_Check" finished-at="2018-11-30T21:02:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1377655, GlobalId=400230, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}]]>
+                <![CDATA[{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1377657, GlobalId=400230, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}]]>
               </value>
             </param>
           </params>
@@ -143,8 +143,8 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:13:22.693Z'
 System info: host: 'IBM286-PBD1Z5V', ip: '9.79.141.222', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:46481/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 521f510b-f1c3-4938-98af-8aac1a6eed24
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:35713/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 50fe986d-cbcd-4958-bfe1-abbda789db65
 *** Element info: {Using=xpath, value=//*[text()='Global Material ID']/../../../../../../table[2]/tbody/tr/td[4]/div}]]>
             </message>
             <full-stacktrace>
@@ -153,10 +153,10 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:13:22.693Z'
 System info: host: 'IBM286-PBD1Z5V', ip: '9.79.141.222', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:46481/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 521f510b-f1c3-4938-98af-8aac1a6eed24
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:35713/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 50fe986d-cbcd-4958-bfe1-abbda789db65
 *** Element info: {Using=xpath, value=//*[text()='Global Material ID']/../../../../../../table[2]/tbody/tr/td[4]/div}
-at sun.reflect.GeneratedConstructorAccessor34.newInstance(Unknown Source)
+at sun.reflect.GeneratedConstructorAccessor33.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 at java.lang.reflect.Constructor.newInstance(Unknown Source)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
@@ -169,7 +169,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-at com.mendix.page.MaterialPage.getGlobalId(MaterialPage.java:469)
+at com.mendix.page.MaterialPage.getGlobalId(MaterialPage.java:471)
 at com.mendix.test.MaterialScript.Material_Create_Syndication_Check(MaterialScript.java:128)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)

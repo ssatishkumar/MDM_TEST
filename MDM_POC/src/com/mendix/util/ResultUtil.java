@@ -39,7 +39,7 @@ static{
 public static void report(String strStatus,String strDesc){
 	
 	if(strStatus.equalsIgnoreCase("PASS")){
-		reporter.log(LogStatus.PASS, strDesc,takeScreenshot());
+		reporter.log(LogStatus.PASS, strDesc);
 		log.info("PASS- "  + strDesc );
 		
 	

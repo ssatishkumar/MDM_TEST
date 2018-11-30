@@ -126,9 +126,9 @@ public class MaterialScript {
 		SharedDriver.pageContainer.materialPage.scrolltoGlobalSearch();
 		SharedDriver.pageContainer.materialPage.reqIdSearchGlobal(dataMap.get("RequestId"));
 		SharedDriver.pageContainer.materialPage.getGlobalId();
-		SharedDriver.pageContainer.materialPage.clickFullMaterialData();
-		SharedDriver.pageContainer.materialPage.getMaterial_Number();
-
+//		SharedDriver.pageContainer.materialPage.clickFullMaterialData();
+//		SharedDriver.pageContainer.materialPage.getMaterial_Number();
+		SharedDriver.pageContainer.processInfoPage.browserClose();		
 	}
 
 }

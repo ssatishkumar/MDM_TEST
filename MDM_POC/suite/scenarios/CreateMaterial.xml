@@ -12,8 +12,7 @@
 			</class>
 		</classes>
 	</test>
-	<!-- <test name="Material_Create_Fill 
-		in questionnaire">
+	<test name="Material_Create_Fill_in_questionnaire">
 		<classes>
 			<class name="com.mendix.test.MaterialScript">
 				<methods>
@@ -30,7 +29,7 @@
 				</methods>
 			</class>
 		</classes>
-	</test> -->
+	</test>
 	<test name="Process_Information_Check">
 		<classes>
 			<class name="com.mendix.test.MaterialScript">
