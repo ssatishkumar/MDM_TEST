@@ -466,6 +466,7 @@ public class MaterialPage {
 		Sync.waitForSeconds(Constants.WAIT_2);	}
 
 	public  String getGlobalId() throws FileNotFoundException, IOException {
+		Sync.waitForObject(driver, "Wait for Global Material Id", driver.findElement(By.xpath("//*[text()='Global Material ID']/../../../../../../table[2]/tbody/tr/td[4]/div")));
 		String globalId=driver.findElement(By.xpath("//*[text()='Global Material ID']/../../../../../../table[2]/tbody/tr/td[4]/div")).getText();
 		System.out.println(globalId);
 		ExcelUtil.excelWriteGlobalId(globalId);;

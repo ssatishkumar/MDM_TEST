@@ -70,8 +70,6 @@ public class MaterialScript {
 		SharedDriver.pageContainer.materialApprovalPage.reqIdSearchMyTasks(dataMap.get("RequestId"));
 		SharedDriver.pageContainer.materialApprovalPage.approvalBtnClick();
 		SharedDriver.pageContainer.materialApprovalPage.duplicateCheck();
-		/*SharedDriver.pageContainer.processInfoPage.processInfoSearch();
-		SharedDriver.pageContainer.processInfoPage.reqIdSearch(dataMap.get("RequestId"));*/
 
 	}
 
@@ -116,6 +114,7 @@ public class MaterialScript {
 		SharedDriver.pageContainer.materialApprovalPage.submitGlobalRequest_draft();
 	}
 
+	
 	@Test(dataProvider="Process_Information_Check",dataProviderClass=staticProviderClass.class)
 	public void Material_Create_Syndication_Check (Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException 
 	{

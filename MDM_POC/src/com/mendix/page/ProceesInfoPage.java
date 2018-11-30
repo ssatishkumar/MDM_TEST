@@ -104,20 +104,22 @@ public class ProceesInfoPage {
 		Sync.waitForSeconds(Constants.WAIT_1);
 		Textbox.enterValue("Enter Request Id", txtboxRequestId, strValue);
 		
-		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+	/*	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
 		//get current date time with Date()
 		Date date = new Date();
 
 		// Now format the date
-		String dateFormatted= dateFormat.format(date);
+		String dateFormatted= dateFormat.format(date);*/
 		Sync.waitForSeconds(Constants.WAIT_2);
-		Textbox.click("Enter Requested Date", txtboxRequestedDate);
-		Textbox.clear("Clear Request Id Text Box", txtboxRequestId);
-		Textbox.enterValue("Enter Requested Date", txtboxRequestedDate, dateFormatted);
+		Sync.waitForSeconds(Constants.WAIT_2);
+		driver.findElement(By.xpath("(.//*[@class='btn mx-button mx-dateinput-select-button'])[1]")).click();
+		driver.findElement(By.xpath(".//*[@aria-selected='true']/span")).click();
+//		Textbox.click("Enter Requested Date", txtboxRequestedDate);
+//		Textbox.clear("Clear Request Id Text Box", txtboxRequestId);
+//		Textbox.jsEnterValue("Enter Requested Date", driver, txtboxRequestedDate, dateFormatted);
 		
 		Sync.waitForSeconds(Constants.WAIT_5);
-//		Button.click("Click Request Id Search Button", btnReqIdSearch);
 		driver.findElement(By.xpath(".//*[@class='glyphicon glyphicon-search']")).click();
 	}
 
@@ -126,9 +128,7 @@ public class ProceesInfoPage {
 		Sync.waitForObjectFluent(driver, menuProcessInfo);
 		Sync.waitForSeconds(Constants.WAIT_3);
 		Sync.waitForObjectFluent(driver, menuProcessInfo);
-//		Sync.waitForElementToBeClickable(driver, menuProcessInfo);
 		Button.click("Click the Process Info Menu", menuProcessInfo);
-//		Sync.waitForElementToBeClickable(driver, menuProcessInfoSearch);
 		return Button.click("Click the Procees info search menu", menuProcessInfoSearch);
 	}
 
@@ -139,7 +139,6 @@ public class ProceesInfoPage {
 		String state=driver.findElement(By.xpath(".//*[text()='"+strValue+"']/../../td[9]/div")).getText();
 		System.out.println(state);
 		Sync.waitForSeconds(Constants.WAIT_5);
-//		ExcelUtil.setCellData("Ma", "Level2", 2, state);
 		return state;
 	}
 
