@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Create Material with JDE">
+	<test name="HeiPort_Login_LDR">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+					<include name="tasKill" />
+					<include name="openBrowser" />
+					<include name="loginAsLDR" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Material_Create_Fill in questionnaire">
+		<classes>
+			<class name="com.mendix.test.MaterialScript">
+				<methods>
+					<include name="Material_Create_Fill_In_Questionnaire" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Material_Create_Fill_In_Data_Local_JDE">
+		<classes>
+			<class name="com.mendix.test.MaterialNavScript">
+				<methods>
+					<include name="CreateMaterial_Fill_In_JDE" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
+
+
