@@ -26,7 +26,6 @@
 			<class name="com.mendix.test.MaterialNavScript">
 				<methods>
 					<include name="CreateMaterial_Fill_In_JDE" />
-
 				</methods>
 			</class>
 		</classes>
