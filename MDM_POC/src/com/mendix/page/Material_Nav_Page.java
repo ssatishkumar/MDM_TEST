@@ -3,9 +3,13 @@ package com.mendix.page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.mendix.tool.Button;
 import com.mendix.tool.Constants;
@@ -34,20 +38,40 @@ public class Material_Nav_Page {
 	@FindBy(how=How.XPATH, using="(.//*[@class='glyphicon glyphicon-edit'])[5]")
 	WebElement BtnEditPlantData;
 	
+	@FindBy(how=How.XPATH, using="(.//*[@class='glyphicon glyphicon-new-window'])[6]")
+	WebElement BtnAddPlantData;
 	
-	public boolean enterPlanningLocalData() {
+	
+	public boolean enterLocalData() {
 
 		Sync.waitForSeconds(Constants.WAIT_6);
 		Sync.waitUntilObjectDisappears(driver, "Waiting of Create page to Load", By.xpath(".//*[@id='mxui_widget_Progress_0']/div[2]"));
 		Sync.waitForObject(driver, textLocalData);
 		Button.click("Local Data", textLocalData);
-		return Button.click("Click Edit button", BtnEditPlantData);
-		
-		
-		
+		Sync.waitForObject(driver, BtnAddPlantData);
+		return Button.click("Click Edit button", BtnAddPlantData);
 		
 	}
+	
+	public boolean enterPlantData(String strValue) {
 
+		Sync.waitForSeconds(Constants.WAIT_6);
+		Sync.waitUntilObjectDisappears(driver, "Waiting of Create page to Load", By.xpath(".//*[@id='mxui_widget_Progress_0']/div[2]"));
+		Sync.waitForObject(driver, BtnAddPlantData);
+		Button.click("Local Plant Data", BtnAddPlantData);
+		
+		
+		WebDriverWait wait= new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()='"+strValue+"']")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='"+strValue+"']")));
+		driver.findElement(By.xpath("//div[text()='"+strValue+"']")).click();
+		return false;
+	
+		
+	}
+	
+	
+	
 	
 	
 }

@@ -20,10 +20,12 @@ public class MaterialNavScript {
 	 * Create Material with Nav.
 	 */
 
-	@Test//(dataProvider="CreateMaterial_Fill_In_JDE",dataProviderClass=staticProviderClass.class)
-	public void Material_Create_Fill_In_Data(Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException 
+	@Test(dataProvider="CreateMaterial_Fill_In_JDE",dataProviderClass=staticProviderClass.class)
+	public void Material_Create_Fill_In_Data_JDE(Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException 
 	{
-		SharedDriver.pageContainer.materialNavPage.enterPlanningLocalData();
+		SharedDriver.pageContainer.materialNavPage.enterLocalData();
+		SharedDriver.pageContainer.materialNavPage.enterPlantData(dataMap.get("Plant"));
+		
 		
 	}
 		 	

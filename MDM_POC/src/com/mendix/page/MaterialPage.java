@@ -207,7 +207,6 @@ public class MaterialPage {
 
 	public boolean clickMaterial(String strPageName) throws InterruptedException{
 		Sync.waitForSeconds(Constants.WAIT_6);
-//		Sync.fluentWaitForObject(driver, textMaterial, By.xpath("//a[contains(text(),'Materials')]"));
 		if(Button.verifyObject(textMaterial)){
 			Sync.waitForObject(driver ,"Materials", textMaterial);
 			Button.NewmouseOver("Materials", driver, textMaterial);
@@ -318,25 +317,15 @@ public class MaterialPage {
 	public boolean baseUOMSelectionTest(String strValue) throws InterruptedException {
 
 		Sync.waitForSeconds(Constants.WAIT_2);
-
 		Button.click("Click Base UOM selection button", btnBaseUOMSelection);
-
 		Sync.waitForSeconds(Constants.WAIT_2);
-
 		Textbox.enterValue("Enter Base UOM", txtboxBaseUOM, strValue);
-
 		Sync.waitForSeconds(Constants.WAIT_2);
-
 		Button.click("Click Base UOM Search button", btnBaseUOMSearch);
-
 		Sync.waitForSeconds(Constants.WAIT_2);
-
 		Button.click("Click Base UOM Display", txtBaseUOMDisplay);
-
 		Sync.waitForSeconds(Constants.WAIT_2);
-
 		return Button.click("Click Base UOM select button", btnBaseUOMSelect);
-
 	}
 
 
