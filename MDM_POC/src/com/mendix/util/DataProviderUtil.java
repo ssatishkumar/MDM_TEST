@@ -43,7 +43,7 @@ public class DataProviderUtil {
 		
 		@DataProvider(name="CreateMaterial_Fill_In_JDE",parallel=false)
 		public static Iterator<Object[]> MaterialNavPage(){
-			Iterator<Object[]> testData=ExcelUtil.getTestData("C:\\Users\\IBM_ADMIN\\Downloads\\MDM_POC_Upgrade\\MDM_POC_Upgrade\\input\\data\\Global_Material_Data_Nav.xlsx", "YROH");
+			Iterator<Object[]> testData=ExcelUtil.getTestData("C:\\Users\\IBM_ADMIN\\git\\MDM_TEST\\MDM_POC\\input\\data\\Global_Material_Data_Nav.xlsx", "YROH");
 			return testData;
 		}
 		/**
