@@ -1,18 +1,12 @@
 package com.mendix.page;
 
 import java.awt.AWTException;
-import java.awt.Robot;
 import java.io.IOException;
-import java.net.URL;
-import java.nio.charset.Charset;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -20,7 +14,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.google.common.io.Resources;
 import com.mendix.tool.Button;
 import com.mendix.tool.Constants;
 import com.mendix.tool.Sync;
@@ -72,8 +65,15 @@ public class Material_Nav_Page {
 		
 	}
 	
+	public boolean clickAddPlantData() {
+
+		Sync.waitForObject(driver, BtnAddPlantData);
+		return Button.click("Click Edit button", BtnAddPlantData);
+		
+	}
 	
-	public boolean enterPlantData(String strValue) {
+	
+	public boolean enterPlantData() {
 
 		Sync.waitForSeconds(Constants.WAIT_6);
 		Sync.waitUntilObjectDisappears(driver, "Waiting of Create page to Load", By.xpath(".//*[@id='mxui_widget_Progress_0']/div[2]"));
@@ -91,16 +91,15 @@ public class Material_Nav_Page {
 	
 	public void clickEditPlanningData() throws AWTException, IOException
 	{
-		Sync.waitForSeconds(Constants.WAIT_5);
-		driver.findElement(By.xpath("(.//span[@class='glyphicon glyphicon-edit'])[5]")).click();
+		Sync.waitForSeconds(Constants.WAIT_6);
+		driver.findElement(By.xpath("(//button[text()='Edit'])[5]")).click();
 		Sync.waitForSeconds(Constants.WAIT_3);
 		Sync.waitUntilObjectDisappears(driver, "Wait for Materials", By.xpath((".//*[@id='mxui_widget_Progress_0']/div[2]")));
-//		Sync.waitForObject(driver, driver.findElement(By.xpath("(//*[text()='OK'])[2]")));
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		/*JavascriptExecutor jse = (JavascriptExecutor)driver;
 		Sync.waitForSeconds(Constants.WAIT_6);
 		jse.executeScript("arguments[0].click()", driver.findElement(By.xpath("(//*[text()='OK'])[2]")));
 		Sync.waitForSeconds(Constants.WAIT_3);
-		jse.executeScript("arguments[0].click()", driver.findElement(By.xpath("(//*[text()='OK'])[1]")));
+		jse.executeScript("arguments[0].click()", driver.findElement(By.xpath("(//*[text()='OK'])[1]")));*/
 	}
 	
 	public void selectRoundingPrecision()
@@ -112,23 +111,117 @@ public class Material_Nav_Page {
 	}
 	public void clickLocalAction()
 	{
-		
+		Sync.waitForSeconds(Constants.WAIT_1);
 		driver.findElement(By.xpath(".//*[@class='glyphicon glyphicon-flash']")).click();
 	}
 	
 	public void clickValidatLocalData()
 	{
-	
+		Sync.waitForSeconds(Constants.WAIT_1);
 		driver.findElement(By.xpath(".//*[@class='glyphicon glyphicon-check']")).click();
 	
 	}
 	
 	public void clickSaveButton()
 	{
-	
+		Sync.waitForSeconds(Constants.WAIT_1);
 		driver.findElement(By.xpath(".//*[@class='glyphicon glyphicon-ok']")).click();
 	
 	}
+	
+	public void clickFinancetab()
+	{
+		Sync.waitForSeconds(Constants.WAIT_3);
+		driver.findElement(By.xpath("//a[text()='Finance']")).click();
+	
+	}
+	
+	public void clickEditFinanceData() throws AWTException, IOException
+	{
+		Sync.waitForSeconds(Constants.WAIT_5);
+		driver.findElement(By.xpath("(.//span[@class='glyphicon glyphicon-edit'])[7]")).click();
+		/*Sync.waitForSeconds(Constants.WAIT_3);
+		Sync.waitUntilObjectDisappears(driver, "Wait for Materials", By.xpath((".//*[@id='mxui_widget_Progress_0']/div[2]")));
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		Sync.waitForSeconds(Constants.WAIT_6);
+		jse.executeScript("arguments[0].click()", driver.findElement(By.xpath("(//*[text()='OK'])[2]")));
+		Sync.waitForSeconds(Constants.WAIT_3);
+		jse.executeScript("arguments[0].click()", driver.findElement(By.xpath("(//*[text()='OK'])[1]")));*/
+	}
+	
+	
+	
+	public void selectVATPostingGroup()
+	{
+		WebElement dropdown =driver.findElement(By.xpath("//*[text()='VAT Prod. Posting Group']/../div/div/select"));
+		Select roundVATPostingGroupDown= new Select(dropdown);
+		roundVATPostingGroupDown.selectByVisibleText("NO_VAT, 0% VAT");
+		
+	}
+	
+	public void selectItemDepositGroupCode()
+	{
+		WebElement dropdown =driver.findElement(By.xpath("//*[text()='Item Deposit Group Code']/../div/div/select"));
+		Select roundVATPostingGroupDown= new Select(dropdown);
+		roundVATPostingGroupDown.selectByVisibleText("02, Keg");
+		
+	}
+	
+	public void submitGlobalRequestTest() throws InterruptedException {
+
+
+		Sync.waitForSeconds(Constants.WAIT_5);
+		Button.click("Click Global submit Global Request", driver.findElement(By.xpath("(//span[@class='glyphicon glyphicon-save'])[2]")));
+		Sync.waitForSeconds(Constants.WAIT_2);
+		Thread.sleep(8000);
+	}
+	
+	public void clickSiteNewButton(){
+
+
+		Sync.waitForSeconds(Constants.WAIT_2);
+		Button.click("Click New Button", driver.findElement(By.xpath("//button[text()='New']")));
+		Sync.waitForSeconds(Constants.WAIT_2);
+	
+	}
+	
+	public void selectLocationCode()
+	{
+		WebElement dropdown =driver.findElement(By.xpath("//*[text()='Item Deposit Group Code']/../div/div/select"));
+		Select LocationCodeDropDown= new Select(dropdown);
+		LocationCodeDropDown.selectByVisibleText("DZ01, Brewery Rouiba");
+		
+	}
+	
+	public void selectReplenishmentSystem()
+	{
+		WebElement dropdown =driver.findElement(By.xpath("//*[text()='Replenishment System']/../div/div/select"));
+		Select LocationCodeDropDown= new Select(dropdown);
+		LocationCodeDropDown.selectByVisibleText("2, Transfer");
+		
+	}
+	
+	public void clickSiteValidateButton(){
+
+
+		Sync.waitForSeconds(Constants.WAIT_2);
+		Button.click("Click New Button", driver.findElement(By.xpath("//*[text()='Validate Local Data']")));
+		Sync.waitForSeconds(Constants.WAIT_2);
+	
+	}
+	
+	public void clickSiteSaveButton(){
+
+
+		Sync.waitForSeconds(Constants.WAIT_2);
+		Button.click("Click New Button", driver.findElement(By.xpath(".//*[@class='glyphicon glyphicon-ok']")));
+		Sync.waitForSeconds(Constants.WAIT_2);
+	
+	}
+	
+	
+	
+	
 	
 	
 }

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Create_Material_with_JDE">
-              <span class="suite-name border-passed">Create Material with JDE</span>
+              <span class="suite-name border-failed">Create Material with JDE</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Create_Material_with_JDE">
-                    <span class="test-stats">3 tests</span>
+                    <span class="test-stats">4 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">8 methods, 3 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Create_Material_with_JDE" class="hide-methods failed suite-Create_Material_with_JDE"> (hide)</a> <!-- hide-methods failed suite-Create_Material_with_JDE -->
+                      <a href="#" panel-name="suite-Create_Material_with_JDE" class="show-methods failed suite-Create_Material_with_JDE"> (show)</a> <!-- show-methods failed suite-Create_Material_with_JDE -->
+                    </span>
+                    <div class="method-list-content failed suite-Create_Material_with_JDE">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Create_Material_with_JDE" title="com.mendix.test.MaterialNavScript" hash-for-method="Material_Create_Fill_In_Data_JDE_Finance">Material_Create_Fill_In_Data_JDE_Finance</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Create_Material_with_JDE" title="com.mendix.test.MaterialNavScript" hash-for-method="Material_Create_Fill_In_Data_JDE_Planning">Material_Create_Fill_In_Data_JDE_Planning</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Create_Material_with_JDE" title="com.mendix.test.MaterialNavScript" hash-for-method="Material_Create_Fill_In_Data_JDE_Site">Material_Create_Fill_In_Data_JDE_Site</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Create_Material_with_JDE -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +124,11 @@
                       <a href="#" panel-name="suite-Create_Material_with_JDE" class="show-methods passed suite-Create_Material_with_JDE"> (show)</a> <!-- show-methods passed suite-Create_Material_with_JDE -->
                     </span>
                     <div class="method-list-content passed suite-Create_Material_with_JDE">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Create_Material_with_JDE" title="com.mendix.test.MaterialNavScript" hash-for-method="Material_Create_Fill_In_Data({GLOBAL FIELDS=BE001OC, Execute=Y, Fields=EN, Material Description:=Lens Non Illuminated 82mm MAES 2...)">Material_Create_Fill_In_Data({GLOBAL FIELDS=BE001OC, Execute=Y, Fields=EN, Material Description:=Lens Non Illuminated 82mm MAES 2...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Create_Material_with_JDE" title="com.mendix.test.MaterialScript" hash-for-method="Material_Create_Fill_In_Questionnaire">Material_Create_Fill_In_Questionnaire</a> <!-- method navigator-link -->
@@ -132,6 +161,102 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Create_Material_with_JDE" class="panel Create_Material_with_JDE">
+          <div class="suite-Create_Material_with_JDE-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.mendix.test.MaterialNavScript</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Material_Create_Fill_In_Data_JDE_Finance">
+                  </a> <!-- Material_Create_Fill_In_Data_JDE_Finance -->
+                  <span class="method-name">Material_Create_Fill_In_Data_JDE_Finance</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: Element is no longer valid
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
+System info: host: &apos;IBM286-PBD1Z5V&apos;, ip: &apos;9.78.125.158&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:8406/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 7d581c32-6ef7-4dd2-8639-772f9e0e8e94
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at com.mendix.page.Material_Nav_Page.clickFinancetab(Material_Nav_Page.java:135)
+	at com.mendix.test.MaterialNavScript.Material_Create_Fill_In_Data_JDE_Finance(MaterialNavScript.java:53)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Material_Create_Fill_In_Data_JDE_Planning">
+                  </a> <!-- Material_Create_Fill_In_Data_JDE_Planning -->
+                  <span class="method-name">Material_Create_Fill_In_Data_JDE_Planning</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate element with text: 0.01
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
+System info: host: &apos;IBM286-PBD1Z5V&apos;, ip: &apos;9.78.125.158&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
+	at com.mendix.page.Material_Nav_Page.selectRoundingPrecision(Material_Nav_Page.java:109)
+	at com.mendix.test.MaterialNavScript.Material_Create_Fill_In_Data_JDE_Planning(MaterialNavScript.java:44)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Material_Create_Fill_In_Data_JDE_Site">
+                  </a> <!-- Material_Create_Fill_In_Data_JDE_Site -->
+                  <span class="method-name">Material_Create_Fill_In_Data_JDE_Site</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == //button[text()=&apos;New&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
+System info: host: &apos;IBM286-PBD1Z5V&apos;, ip: &apos;9.78.125.158&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:8406/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 7d581c32-6ef7-4dd2-8639-772f9e0e8e94
+*** Element info: {Using=xpath, value=//button[text()=&apos;New&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.mendix.page.Material_Nav_Page.clickSiteNewButton(Material_Nav_Page.java:183)
+	at com.mendix.test.MaterialNavScript.Material_Create_Fill_In_Data_JDE_Site(MaterialNavScript.java:65)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Create_Material_with_JDE-class-failed -->
+          <div class="suite-Create_Material_with_JDE-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.mendix.test.MaterialNavScript</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Material_Create_Fill_In_Data({GLOBAL FIELDS=BE001OC, Execute=Y, Fields=EN, Material Description:=Lens Non Illuminated 82mm MAES 2...)">
+                  </a> <!-- Material_Create_Fill_In_Data({GLOBAL FIELDS=BE001OC, Execute=Y, Fields=EN, Material Description:=Lens Non Illuminated 82mm MAES 2...) -->
+                  <span class="method-name">Material_Create_Fill_In_Data</span>
+                  <span class="parameters">({GLOBAL FIELDS=BE001OC, Execute=Y, Fields=EN, Material Description:=Lens Non Illuminated 82mm MAES 2018, Language=NL, Description=Lens Niet Verlicht 82mm MAES 2017, Goods and Services Typology=13, Material Group=CMG0472, General Item Cat Group=YW07, X-plant matl Status Valid From=24/03/2017, Gross Weight Base UoM=200.000, Unit of Weight=G, EAN/UPC=, Material Type=YUNB, X-plant matl Status=Z3, Base UoM=PC, Net Weight Base UoM=200.000, EAN Category=, =, Alternative UoMs: 1=, Denominator =,                                              Alt UoM=,                                             Numerator=,                  Lower Level Unit Of Measure=,                           Calculated Net Weight=,                                           Gross weight=,                                   Unit of Weight=,                                           EAN/UPC=,                                         EAN Category=,                     Determine EAN Check Digit=,                              Additional EANS exist=, Alternative UoMs: 2=, Alternative UoMs: 3=, Alternative UoMs: 4=, Alternative UoMs: 5=, Alternative UoMs: 6=, Alternative UoMs: 7=, Add EAN Units: 1=,                      Alternative unit of measure=,                                                Main EAN=,                                               EAN/UPC=,                                            EAN Category=,                      Determine EAN check digit=, Add EAN Units: 2=, Add EAN Units: 3=, Warehouseing, Purchasing and Sales:=, Storage Conditions=, Order Unit=, Purchasing Value Key=, Variable OUN=, Transportation Group=, JDE:=, Stocking Type Global=, Bulk/Packed Flag=, Sales Price Level=, Commitment Method=, UoM - Primary=, UoM - Secondary=, UoM - Pricing=, UoM - Production=, Round To Whole Number=, Line Type=, Inventory Cost Level=, Purchase Price Level=, Standard UoM=, UoM - Purchasing=, UoM - Shipping=, UoM - Component=, Navision:=, Type=, Inventory Value Zero=, Price Profit Calculation=, Product Group Code=, Attachment:=, Document Name=, Process Information:=, All Comments=})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Create_Material_with_JDE-class-passed -->
           <div class="suite-Create_Material_with_JDE-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -206,11 +331,22 @@
       &lt;/class&gt; &lt;!-- com.mendix.test.MaterialScript --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Material_Create_Fill in questionnaire --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Material_Create_Fill_In_Data&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mendix.test.MaterialNavScript&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Material_Create_Fill_In_Data&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.mendix.test.MaterialNavScript --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Material_Create_Fill_In_Data --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Material_Create_Fill_In_Data_Local_JDE&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.mendix.test.MaterialNavScript&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;CreateMaterial_Fill_In_JDE&quot;/&gt;
+          &lt;include name=&quot;Material_Create_Fill_In_Data_JDE_Planning&quot;/&gt;
+          &lt;include name=&quot;Material_Create_Fill_In_Data_JDE_Finance&quot;/&gt;
+          &lt;include name=&quot;Material_Create_Fill_In_Data_JDE_Site&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.mendix.test.MaterialNavScript --&gt;
     &lt;/classes&gt;
@@ -230,6 +366,9 @@
               </li>
               <li>
                 <span class="test-name">Material_Create_Fill in questionnaire (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Material_Create_Fill_In_Data (1 class)</span>
               </li>
               <li>
                 <span class="test-name">Material_Create_Fill_In_Data_Local_JDE (1 class)</span>
@@ -258,28 +397,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Material_Create_Fill_In_Questionnaire')
-data.setCell(0, 2, 'com.mendix.test.MaterialScript')
-data.setCell(0, 3, 112929);
+data.setCell(0, 1, 'Material_Create_Fill_In_Data')
+data.setCell(0, 2, 'com.mendix.test.MaterialNavScript')
+data.setCell(0, 3, 38311);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginAsLDR')
-data.setCell(1, 2, 'com.mendix.test.LoginScript')
-data.setCell(1, 3, 5614);
+data.setCell(1, 1, 'Material_Create_Fill_In_Questionnaire')
+data.setCell(1, 2, 'com.mendix.test.MaterialScript')
+data.setCell(1, 3, 22390);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'openBrowser')
-data.setCell(2, 2, 'com.mendix.test.LoginScript')
-data.setCell(2, 3, 3934);
+data.setCell(2, 1, 'Material_Create_Fill_In_Data_JDE_Planning')
+data.setCell(2, 2, 'com.mendix.test.MaterialNavScript')
+data.setCell(2, 3, 15453);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'tasKill')
+data.setCell(3, 1, 'loginAsLDR')
 data.setCell(3, 2, 'com.mendix.test.LoginScript')
-data.setCell(3, 3, 94);
+data.setCell(3, 3, 4983);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'openBrowser')
+data.setCell(4, 2, 'com.mendix.test.LoginScript')
+data.setCell(4, 3, 3529);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'Material_Create_Fill_In_Data_JDE_Finance')
+data.setCell(5, 2, 'com.mendix.test.MaterialNavScript')
+data.setCell(5, 3, 1802);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'Material_Create_Fill_In_Data_JDE_Site')
+data.setCell(6, 2, 'com.mendix.test.MaterialNavScript')
+data.setCell(6, 3, 1318);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'tasKill')
+data.setCell(7, 2, 'com.mendix.test.LoginScript')
+data.setCell(7, 3, 50);
 window.suiteTableData['Create_Material_with_JDE']= { tableData: data, tableDiv: 'times-div-Create_Material_with_JDE'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Create_Material_with_JDE">
               </div> <!-- times-div-Create_Material_with_JDE -->
             </div> <!-- times-div -->
@@ -294,9 +449,26 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Create_Material_with_JDE" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">10 ignored methods</span>
+            <span class="header-content">16 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.mendix.test.MaterialNavScript</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">Material_Create_Fill_In_Data_JDE_Finance</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data_JDE_Site</span>
+                <br/>
+                <span class="ignored-method-name">Process_Information_Check</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data_JDE_Planning</span>
+                <br/>
+                <span class="ignored-method-name">Process_Information_Check</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.mendix.test.MaterialScript</span>
               <div class="ignored-methods-div">
@@ -321,14 +493,9 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">loginAsGDA</span>
                 <br/>
-                <span class="ignored-method-name">loginAsGBDA</span>
+                <span class="ignored-method-name">loginAsLDS</span>
                 <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.mendix.test.MaterialNavScript</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">Material_Create_Fill_In_Data</span>
+                <span class="ignored-method-name">loginAsGBDA</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -342,27 +509,52 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.mendix.test.LoginScript</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">setup(org.testng.TestRunner@48c4245d)</span>
+                <span class="method-name">setup(org.testng.TestRunner@71870da7)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">tasKill</span>
-                <span class="method-start">108 ms</span>
+                <span class="method-start">96 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">openBrowser</span>
-                <span class="method-start">204 ms</span>
+                <span class="method-start">150 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginAsLDR</span>
-                <span class="method-start">4140 ms</span>
+                <span class="method-start">3680 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.mendix.test.MaterialScript</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">Material_Create_Fill_In_Questionnaire</span>
-                <span class="method-start">9777 ms</span>
+                <span class="method-start">8684 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.mendix.test.MaterialNavScript</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Material_Create_Fill_In_Data({GLOBAL FIELDS=BE001OC, Execute=Y, Fields=EN, Material Description:=Lens Non Illuminated 82mm MAES 2...)</span>
+                <span class="method-start">31729 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Material_Create_Fill_In_Data_JDE_Planning</span>
+                <span class="method-start">70057 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Material_Create_Fill_In_Data_JDE_Finance</span>
+                <span class="method-start">85512 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Material_Create_Fill_In_Data_JDE_Site</span>
+                <span class="method-start">87316 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

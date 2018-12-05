@@ -7,6 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.mendix.tool.Button;
+import com.mendix.tool.Constants;
 import com.mendix.tool.Menu;
 import com.mendix.tool.Sync;
 import com.mendix.tool.Textbox;
@@ -37,8 +38,7 @@ public class HomePage {
 	 */
 	public boolean navigateToWorkflow(){	
 		
-		
-		
+		Sync.waitForSeconds(Constants.WAIT_3);
 		Sync.waitForObject(driver, "Work", menuWork);
 		Menu.mouseHoverJScript("Work", menuWork, driver);
 		Sync.waitForObject(driver, "MDM Workflow", menuWorkflow);

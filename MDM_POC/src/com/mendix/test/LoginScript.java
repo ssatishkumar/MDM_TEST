@@ -52,9 +52,14 @@ public class LoginScript {
 	@Test
 	public void loginAsLDR(){
 		ResultUtil.reporter.startTest("Login As LDR");
-		//SharedDriver.createDriver();
 		SharedDriver.pageContainer.loginPage.login("MDMM_"+HelperUtil.executionConfigMap.get(Constants.OPCO)+"01_LDR","Heineken01");
 		
+	}
+	
+	@Test
+	public void loginAsLDS(){
+		ResultUtil.reporter.startTest("Login As LDR");
+		SharedDriver.pageContainer.loginPage.login("MDMM_"+HelperUtil.executionConfigMap.get(Constants.OPCO)+"01_LDS","Heineken01");
 	}
 		
 	@Test

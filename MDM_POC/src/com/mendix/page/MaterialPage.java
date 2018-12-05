@@ -106,7 +106,7 @@ public class MaterialPage {
 	@FindBy(how=How.XPATH, using="//div[contains(text(),'Display value')]/../../../../../../table[2]/tbody/tr[1]/td/div")
 	WebElement txtUnitofWeightDisplay;
 
-	@FindBy(how=How.XPATH, using="(.//*[@class='mx-grid-toolbar'])[19]/button[1]")
+	@FindBy(how=How.XPATH, using=".//button[text()='Select']")
 	WebElement btnUnitofWeightSelect;
 
 	@FindBy(how=How.XPATH, using="//*[text()='Base UoM']/../div/button/span")
@@ -122,7 +122,7 @@ public class MaterialPage {
 	@FindBy(how=How.XPATH, using="//div[contains(text(),'Display value')]/../../../../../../table[2]/tbody/tr[1]/td/div")
 	WebElement txtBaseUOMDisplay;
 
-	@FindBy(how=How.XPATH, using="(.//*[@class='mx-grid-toolbar'])[19]/button[1]")
+	@FindBy(how=How.XPATH, using="(//*[text()='Select'])[1]")
 	WebElement btnBaseUOMSelect;
 
 	@FindBy(how=How.XPATH, using="//*[text()='Net Weight Base UoM']/../div/input")
@@ -314,7 +314,7 @@ public class MaterialPage {
 
 	}
 
-	public boolean baseUOMSelectionTest(String strValue) throws InterruptedException {
+	public void baseUOMSelectionTest(String strValue) throws InterruptedException {
 
 		Sync.waitForSeconds(Constants.WAIT_2);
 		Button.click("Click Base UOM selection button", btnBaseUOMSelection);
@@ -324,8 +324,12 @@ public class MaterialPage {
 		Button.click("Click Base UOM Search button", btnBaseUOMSearch);
 		Sync.waitForSeconds(Constants.WAIT_2);
 		Button.click("Click Base UOM Display", txtBaseUOMDisplay);
-		Sync.waitForSeconds(Constants.WAIT_2);
-		return Button.click("Click Base UOM select button", btnBaseUOMSelect);
+		Sync.waitForSeconds(Constants.WAIT_3);
+		Actions btnselect = new Actions(driver);
+		btnselect.moveToElement(btnBaseUOMSelect);
+		btnselect.build();
+		btnselect.perform();
+		Button.click("Click Base UOM select button", btnBaseUOMSelect);
 	}
 
 
@@ -381,6 +385,13 @@ public class MaterialPage {
 		Button.click("Click Ok Button", btnMsgReqIdOk);
 		return Id;
 	}
+	
+	public void clickLocalAction()
+	{
+		Sync.waitForSeconds(Constants.WAIT_2);
+		driver.findElement(By.xpath(".//*[@class='glyphicon glyphicon-flash']")).click();
+	}
+	
 
 	//***********************************************************************************
 

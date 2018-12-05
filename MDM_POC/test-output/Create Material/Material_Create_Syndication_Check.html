@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 30 19:13:23 EST 2018</td>
+<td>Started on:</td><td>Mon Dec 03 10:32:16 EST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>3 seconds (3047 ms)</td>
+<tr><td>Total time:</td><td>18 seconds (18190 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,20 +75,46 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.mendix.test.MaterialScript.Material_Create_Syndication_Check()'><b>Material_Create_Syndication_Check</b><br>Test class: com.mendix.test.MaterialScript<br>Parameters: {Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1377657, GlobalId=400230, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}</td>
-<td><div><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: 100
-	at java.lang.String.substring(Unknown Source)
-	at com.mendix.util.ResultUtil.report(ResultUtil.java:49)
-	at com.mendix.tool.Button.click(Button.java:41)
-	at com.mendix.page.HomePage.navigateToWorkflow(HomePage.java:45)
-	at com.mendix.test.MaterialScript.Material_Create_Syndication_Check(MaterialScript.java:122)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2078641942", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2078641942'><pre>java.lang.StringIndexOutOfBoundsException: String index out of range: 100
-	at java.lang.String.substring(Unknown Source)
-	at com.mendix.util.ResultUtil.report(ResultUtil.java:49)
-	at com.mendix.tool.Button.click(Button.java:41)
-	at com.mendix.page.HomePage.navigateToWorkflow(HomePage.java:45)
-	at com.mendix.test.MaterialScript.Material_Create_Syndication_Check(MaterialScript.java:122)
+<td title='com.mendix.test.MaterialScript.Material_Create_Syndication_Check()'><b>Material_Create_Syndication_Check</b><br>Test class: com.mendix.test.MaterialScript<br>Parameters: {Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=all, GlobalId=400230, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: Window is closed
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
+System info: host: &apos;IBM286-PBD1Z5V&apos;, ip: &apos;9.78.125.158&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:34308/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 24a9d921-479b-493a-ae0b-7acf5c241c4c
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:468)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:903)
+	at com.mendix.page.MaterialPage.advancedSearch(MaterialPage.java:439)
+	at com.mendix.test.MaterialScript.Material_Create_Syndication_Check(MaterialScript.java:125)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace430329518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace430329518'><pre>org.openqa.selenium.NoSuchWindowException: Window is closed
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
+System info: host: &apos;IBM286-PBD1Z5V&apos;, ip: &apos;9.78.125.158&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:34308/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 24a9d921-479b-493a-ae0b-7acf5c241c4c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:468)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:903)
+	at com.mendix.page.MaterialPage.advancedSearch(MaterialPage.java:439)
+	at com.mendix.test.MaterialScript.Material_Create_Syndication_Check(MaterialScript.java:125)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -115,7 +141,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
+<td>18</td>
 <td>com.mendix.test.MaterialScript@5bcea91b</td></tr>
 </table><p>
 </body>
