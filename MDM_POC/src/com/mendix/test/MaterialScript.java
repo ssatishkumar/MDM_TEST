@@ -103,13 +103,15 @@ public class MaterialScript {
 
 	}
 
-	@Test(dataProvider="Process_Information_Check_draft",dataProviderClass=staticProviderClass.class)
+	@Test(dataProvider="Process_Information_Check",dataProviderClass=staticProviderClass.class)
 	public void Material_Create_Fill_in_Data_Save_as_Draft_Submit (Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException 
 	{
-		Thread.sleep(3000);
+//		Thread.sleep(3000);
+		Sync.waitForSeconds(Constants.WAIT_3);
 		SharedDriver.pageContainer.homePage.navigateToWorkflow();
 		SharedDriver.pageContainer.materialPage.switchToPopup();
 		SharedDriver.pageContainer.materialApprovalPage.reqIdSearchMyTasks(dataMap.get("RequestId"));
+		SharedDriver.pageContainer.materialPage.clickLocalAction();
 		SharedDriver.pageContainer.materialPage.validateTestCreate();
 		SharedDriver.pageContainer.materialApprovalPage.submitGlobalRequest_draft();
 	}
@@ -128,7 +130,8 @@ public class MaterialScript {
 		SharedDriver.pageContainer.materialPage.getGlobalId();
 //		SharedDriver.pageContainer.materialPage.clickFullMaterialData();
 //		SharedDriver.pageContainer.materialPage.getMaterial_Number();
-		SharedDriver.pageContainer.processInfoPage.browserClose();		
+		SharedDriver.pageContainer.processInfoPage.browserClose();	
+		SharedDriver.pageContainer.materialApprovalPage.launchUFT();
 	}
 
 }

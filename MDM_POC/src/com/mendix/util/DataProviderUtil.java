@@ -61,8 +61,8 @@ public class DataProviderUtil {
 		public static Iterator<Object[]> ProcessInfoDraftPage(){
 			Iterator<Object[]> testData=ExcelUtil.getTestData("C:\\Users\\IBM_ADMIN\\Downloads\\MDM_POC_Upgrade\\MDM_POC_Upgrade\\input\\Mendix-MDM.xlsm", "MaterialPage");
 			return testData;
-		}*/
-		
+		}
+		*/
 		
 		
 	}

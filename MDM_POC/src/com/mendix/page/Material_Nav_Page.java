@@ -124,14 +124,16 @@ public class Material_Nav_Page {
 	
 	public void clickSaveButton()
 	{
-		Sync.waitForSeconds(Constants.WAIT_1);
+		Sync.waitForSeconds(Constants.WAIT_3);
+		Sync.waitForObject(driver, "Wait for Click Save button", driver.findElement(By.xpath(".//*[@class='glyphicon glyphicon-ok']")));
 		driver.findElement(By.xpath(".//*[@class='glyphicon glyphicon-ok']")).click();
 	
 	}
 	
 	public void clickFinancetab()
 	{
-		Sync.waitForSeconds(Constants.WAIT_3);
+		Sync.waitForSeconds(Constants.WAIT_5);
+		Sync.waitForObject(driver, "Wait for Click element", driver.findElement(By.xpath("//a[text()='Finance']")));
 		driver.findElement(By.xpath("//a[text()='Finance']")).click();
 	
 	}

@@ -207,6 +207,8 @@ public class MaterialPage {
 
 	public boolean clickMaterial(String strPageName) throws InterruptedException{
 		Sync.waitForSeconds(Constants.WAIT_6);
+		Sync.waitForSeconds(Constants.WAIT_6);
+//		Sync.waitForSeconds(Constants.WAIT_6);
 		if(Button.verifyObject(textMaterial)){
 			Sync.waitForObject(driver ,"Materials", textMaterial);
 			Button.NewmouseOver("Materials", driver, textMaterial);
@@ -233,25 +235,30 @@ public class MaterialPage {
 	public boolean materialTypeSelection() throws InterruptedException {
 
 		Sync.waitForSeconds(Constants.WAIT_6);
-		if(Button.verifyObject(btnMaterialTypeSelect)){
+		Sync.waitForSeconds(Constants.WAIT_3);
+		Sync.waitForObject(driver ,"Material Type Select", btnMaterialTypeSelect);
+		Sync.waitForSeconds(Constants.WAIT_6);		
+		return Button.click("Material Type Select", btnMaterialTypeSelect);
+		/*if(Button.verifyObject(btnMaterialTypeSelect)){
 			Sync.waitForObject(driver ,"Material Type Select", btnMaterialTypeSelect);
 			Sync.waitForSeconds(Constants.WAIT_3);		
 			return Button.click("Material Type Select", btnMaterialTypeSelect);
 		}else{
 			return Button.click("Material Type Selection", btnMaterialTypeSelect);
-		}
+		}*/
 	}
 
 	public boolean createButtonClick() throws InterruptedException {
 
 		Sync.waitForSeconds(Constants.WAIT_3);
-		if(Button.verifyObject(btnCreate)){
+		Sync.waitForSeconds(Constants.WAIT_3);
+//		if(Button.verifyObject(btnCreate)){
 			Sync.waitForObject(driver ,"Create Button Click", btnCreate);
-			Sync.waitForSeconds(Constants.WAIT_1);		
+			Sync.waitForSeconds(Constants.WAIT_3);		
 			return Button.click("Create Button Click", btnCreate);
-		}else{
-			return Button.click("Create Button Click", btnCreate);
-		}
+//		}else{
+//			return Button.click("Create Button Click", btnCreate);
+//		}
 
 	}
 

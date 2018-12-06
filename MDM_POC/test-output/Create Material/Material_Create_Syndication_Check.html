@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 03 10:32:16 EST 2018</td>
+<td>Started on:</td><td>Wed Dec 05 17:56:21 EST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>18 seconds (18190 ms)</td>
+<tr><td>Total time:</td><td>34 seconds (34364 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,33 +75,37 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.mendix.test.MaterialScript.Material_Create_Syndication_Check()'><b>Material_Create_Syndication_Check</b><br>Test class: com.mendix.test.MaterialScript<br>Parameters: {Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=all, GlobalId=400230, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}</td>
-<td><div><pre>org.openqa.selenium.NoSuchWindowException: Window is closed
+<td title='com.mendix.test.MaterialScript.Material_Create_Syndication_Check()'><b>Material_Create_Syndication_Check</b><br>Test class: com.mendix.test.MaterialScript<br>Parameters: {Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1377768, GlobalId=400244, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == //*[text()=&apos;Global Material ID&apos;]/../../../../../../table[2]/tbody/tr/td[4]/div
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
-System info: host: &apos;IBM286-PBD1Z5V&apos;, ip: &apos;9.78.125.158&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+System info: host: &apos;IBM286-PBD1Z5V&apos;, ip: &apos;9.79.141.150&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
 Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:34308/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 24a9d921-479b-493a-ae0b-7acf5c241c4c
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:21493/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 1f20e69b-b580-4b40-abb1-5b91e1730fa3
+*** Element info: {Using=xpath, value=//*[text()=&apos;Global Material ID&apos;]/../../../../../../table[2]/tbody/tr/td[4]/div}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:468)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:903)
-	at com.mendix.page.MaterialPage.advancedSearch(MaterialPage.java:439)
-	at com.mendix.test.MaterialScript.Material_Create_Syndication_Check(MaterialScript.java:125)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace430329518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace430329518'><pre>org.openqa.selenium.NoSuchWindowException: Window is closed
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.mendix.page.MaterialPage.getGlobalId(MaterialPage.java:479)
+	at com.mendix.test.MaterialScript.Material_Create_Syndication_Check(MaterialScript.java:130)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2085813377", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2085813377'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == //*[text()=&apos;Global Material ID&apos;]/../../../../../../table[2]/tbody/tr/td[4]/div
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
-System info: host: &apos;IBM286-PBD1Z5V&apos;, ip: &apos;9.78.125.158&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+System info: host: &apos;IBM286-PBD1Z5V&apos;, ip: &apos;9.79.141.150&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
 Driver info: org.openqa.selenium.ie.InternetExplorerDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:34308/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 24a9d921-479b-493a-ae0b-7acf5c241c4c
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:21493/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 1f20e69b-b580-4b40-abb1-5b91e1730fa3
+*** Element info: {Using=xpath, value=//*[text()=&apos;Global Material ID&apos;]/../../../../../../table[2]/tbody/tr/td[4]/div}
+	at sun.reflect.GeneratedConstructorAccessor31.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
@@ -110,11 +114,12 @@ Session ID: 24a9d921-479b-493a-ae0b-7acf5c241c4c
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:468)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:903)
-	at com.mendix.page.MaterialPage.advancedSearch(MaterialPage.java:439)
-	at com.mendix.test.MaterialScript.Material_Create_Syndication_Check(MaterialScript.java:125)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.mendix.page.MaterialPage.getGlobalId(MaterialPage.java:479)
+	at com.mendix.test.MaterialScript.Material_Create_Syndication_Check(MaterialScript.java:130)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -141,8 +146,8 @@ Session ID: 24a9d921-479b-493a-ae0b-7acf5c241c4c
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>18</td>
-<td>com.mendix.test.MaterialScript@5bcea91b</td></tr>
+<td>34</td>
+<td>com.mendix.test.MaterialScript@5f3a4b84</td></tr>
 </table><p>
 </body>
 </html>

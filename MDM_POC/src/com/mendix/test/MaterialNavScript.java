@@ -34,7 +34,6 @@ public class MaterialNavScript {
 		SharedDriver.pageContainer.materialPage.uomPrimarySelectionTest();
 		SharedDriver.pageContainer.materialPage.clickLocalAction();
 	}
-//	@Test(dataProvider="CreateMaterial_Fill_In_JDE",dataProviderClass=staticProviderClass.class)
 	@Test
 	public void Material_Create_Fill_In_Data_JDE_Planning() throws InterruptedException, FileNotFoundException, IOException, AWTException 
 	{
@@ -77,7 +76,6 @@ public class MaterialNavScript {
 		SharedDriver.pageContainer.processInfoPage.processInfoSearch();
 		SharedDriver.pageContainer.processInfoPage.reqIdSearch(dataMap.get("RequestId"));
 		SharedDriver.pageContainer.processInfoPage.getState(dataMap.get("RequestId"));
-		Thread.sleep(3000);
 		SharedDriver.pageContainer.processInfoPage.browserClose();
 	}
 

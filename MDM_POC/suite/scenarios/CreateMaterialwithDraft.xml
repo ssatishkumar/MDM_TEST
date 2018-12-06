@@ -26,7 +26,6 @@
 			<class name="com.mendix.test.MaterialScript">
 				<methods>
 					<include name="Material_Create_Fill_In_Data_Save_as_draft" />
-
 				</methods>
 			</class>
 		</classes>
@@ -51,7 +50,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Process_Information_Check">
+	<test name="Process_Information_Check_submit">
 		<classes>
 			<class name="com.mendix.test.MaterialScript">
 				<methods>
@@ -64,7 +63,7 @@
 		<classes>
 			<class name="com.mendix.test.LoginScript">
 				<methods>
-					<include name="tasKill" />
+					<!-- <include name="tasKill" /> -->
 					<include name="openBrowser" />
 					<include name="loginAsGDA" />
 				</methods>

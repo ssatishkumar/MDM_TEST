@@ -41,6 +41,7 @@ public class HomePage {
 		Sync.waitForSeconds(Constants.WAIT_3);
 		Sync.waitForObject(driver, "Work", menuWork);
 		Menu.mouseHoverJScript("Work", menuWork, driver);
+		Sync.waitForSeconds(Constants.WAIT_1);
 		Sync.waitForObject(driver, "MDM Workflow", menuWorkflow);
 		return Button.click("MDM Workflow", menuWorkflow);
 		 

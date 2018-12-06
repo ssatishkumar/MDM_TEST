@@ -149,10 +149,17 @@ public class MaterialApprovalPage {
 		Sync.waitForElementToBeClickable(driver, btnlocalAction);
 		Button.click("Click Local Action button", btnlocalAction);
 		Button.click("Click Approval button", btnGlobalRequest);
-		return Button.click("Click Ok Button", btnMsgReqIdOkdraft);
+		Actions btnselect = new Actions(driver);
+		btnselect.moveToElement(btnMsgReqIdOk);
+		btnselect.build();
+		btnselect.perform();
+		return Button.click("Click Ok Button", btnMsgReqIdOk);
 	}
 
-
+	public  void launchUFT() throws IOException {
+		Runtime.getRuntime().exec("C:\\Users\\IBM_ADMIN\\git\\MDM_TEST\\MDM_POC\\AutoIt UFT Launch\\UFT.exe");
+		
+	}
 
 
 	public void duplicateCheck() {
@@ -163,6 +170,10 @@ public class MaterialApprovalPage {
 			Sync.waitForSeconds(Constants.WAIT_6);
 			Sync.waitUntilObjectDisappears(driver, "Wait for Duplicate check", By.xpath(".//*[@id='mxui_widget_Progress_0']/div[2]"));
 			Sync.waitForSeconds(Constants.WAIT_6);
+			Sync.waitForSeconds(Constants.WAIT_6);
+			Sync.waitForSeconds(Constants.WAIT_6);
+			Sync.waitForSeconds(Constants.WAIT_6);
+			Sync.waitForSeconds(Constants.WAIT_5);
 			/*FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(120)).pollingEvery(Duration.ofMillis(600)).ignoring(NoSuchElementException.class);
 
 			WebElement ele = wait.until(new Function<WebDriver, WebElement>()
@@ -199,6 +210,7 @@ public class MaterialApprovalPage {
 
 			});*/
 			Sync.waitForSeconds(Constants.WAIT_5);
+			Sync.waitForSeconds(Constants.WAIT_3);
 			
 			driver.manage().window().setPosition(new Point(-2000, 0)) ;
 			
@@ -206,6 +218,13 @@ public class MaterialApprovalPage {
 			
 			driver.manage().window().maximize();
 			
+			Sync.waitForSeconds(Constants.WAIT_5);
+			Sync.waitForSeconds(Constants.WAIT_3);
+			Sync.waitForSeconds(Constants.WAIT_3);
+			Sync.waitForSeconds(Constants.WAIT_3);
+			Sync.waitForSeconds(Constants.WAIT_3);
+			Sync.waitForSeconds(Constants.WAIT_5);
+			Sync.waitForSeconds(Constants.WAIT_5);
 			
 		
 			driver.findElement(By.xpath(".//*[text()='Open Record']")).sendKeys(Keys.TAB);

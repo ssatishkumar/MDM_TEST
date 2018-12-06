@@ -220,5 +220,10 @@ public static void excelWriteState(String globalId)
         }
 //        return true;
     }
+	
+	public static void main(String args[]) throws IOException {
+		Runtime.getRuntime().exec("C:\\Users\\IBM_ADMIN\\git\\MDM_TEST\\MDM_POC\\AutoIt UFT Launch\\UFT.exe");
+		
+	}
 
 }
