@@ -6,6 +6,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -172,13 +173,27 @@ public class Sync {
 		// Then - declare the webElement and use a function to find it
 		WebElement element = wait.until(new Function<WebDriver, WebElement>() {
 			public WebElement apply(WebDriver driver) {
-				return driver.findElement(By.id("Start"));
+				return driver.findElement(by);
 			}
 
 
 		});
 		return element;
 	}
-
-
+	
+	
+	public static boolean WaitForPageLoad(WebDriver driver)
+	{
+		boolean blResult = false;
+	
+		try{
+	     new WebDriverWait(driver, getWaitTime(Constants.SCRIPT_WAIT_TIME)).until(
+	          webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+	
+		}
+		catch(Exception e){}
+		return blResult;
+	
+	}
+	
 }

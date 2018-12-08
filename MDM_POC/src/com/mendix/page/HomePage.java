@@ -38,10 +38,11 @@ public class HomePage {
 	 */
 	public boolean navigateToWorkflow(){	
 		
-		Sync.waitForSeconds(Constants.WAIT_3);
+//		Sync.waitForSeconds(Constants.WAIT_3);
+		Sync.WaitForPageLoad(driver);
 		Sync.waitForObject(driver, "Work", menuWork);
 		Menu.mouseHoverJScript("Work", menuWork, driver);
-		Sync.waitForSeconds(Constants.WAIT_1);
+//		Sync.waitForSeconds(Constants.WAIT_1);
 		Sync.waitForObject(driver, "MDM Workflow", menuWorkflow);
 		return Button.click("MDM Workflow", menuWorkflow);
 		 

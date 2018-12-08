@@ -130,7 +130,8 @@ public class ProceesInfoPage {
 	}
 
 	public void browserClose() {
-
+		
+		Sync.waitForSeconds(Constants.WAIT_5);
 		Sync.waitForSeconds(Constants.WAIT_5);
 		driver.close();
 		driver.quit();

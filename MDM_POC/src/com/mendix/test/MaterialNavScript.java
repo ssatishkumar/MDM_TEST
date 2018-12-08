@@ -32,7 +32,6 @@ public class MaterialNavScript {
 		SharedDriver.pageContainer.materialPage.baseUOMSelectionTest(dataMap.get("Base UoM"));
 		SharedDriver.pageContainer.materialPage.netWeightEnterTest(dataMap.get("Net Weight Base UoM"));
 		SharedDriver.pageContainer.materialPage.uomPrimarySelectionTest();
-		SharedDriver.pageContainer.materialPage.clickLocalAction();
 	}
 	@Test
 	public void Material_Create_Fill_In_Data_JDE_Planning() throws InterruptedException, FileNotFoundException, IOException, AWTException 
@@ -40,6 +39,7 @@ public class MaterialNavScript {
 		SharedDriver.pageContainer.materialNavPage.enterLocalData();
 		SharedDriver.pageContainer.materialNavPage.enterPlantData();
 		SharedDriver.pageContainer.materialNavPage.clickEditPlanningData();
+		SharedDriver.pageContainer.materialNavPage.scrolltoRoundingPrecision();
 		SharedDriver.pageContainer.materialNavPage.selectRoundingPrecision();
 		SharedDriver.pageContainer.materialNavPage.clickLocalAction();
 		SharedDriver.pageContainer.materialNavPage.clickValidatLocalData();
@@ -49,25 +49,30 @@ public class MaterialNavScript {
 	@Test
 	public void Material_Create_Fill_In_Data_JDE_Finance() throws InterruptedException, FileNotFoundException, IOException, AWTException 
 	{
-	SharedDriver.pageContainer.materialNavPage.clickFinancetab();
-	SharedDriver.pageContainer.materialNavPage.clickEditFinanceData();
-	SharedDriver.pageContainer.materialNavPage.selectVATPostingGroup();
-	SharedDriver.pageContainer.materialNavPage.selectItemDepositGroupCode();
-	SharedDriver.pageContainer.materialNavPage.clickLocalAction();
-	SharedDriver.pageContainer.materialNavPage.clickValidatLocalData();
-	SharedDriver.pageContainer.materialNavPage.clickSaveButton();
+		SharedDriver.pageContainer.materialNavPage.clickFinancetab();
+		SharedDriver.pageContainer.materialNavPage.clickEditFinanceData();
+		SharedDriver.pageContainer.materialNavPage.selectVATPostingGroup();
+		SharedDriver.pageContainer.materialNavPage.selectItemDepositGroupCode();
+		SharedDriver.pageContainer.materialNavPage.clickLocalAction();
+		SharedDriver.pageContainer.materialNavPage.clickValidatLocalData();
+		SharedDriver.pageContainer.materialNavPage.clickSaveButton();
 	}
-	
+
 	@Test
 	public void Material_Create_Fill_In_Data_JDE_Site() throws InterruptedException, FileNotFoundException, IOException, AWTException 
 	{
-	SharedDriver.pageContainer.materialNavPage.clickSiteNewButton();
-	SharedDriver.pageContainer.materialNavPage.selectLocationCode();
-	SharedDriver.pageContainer.materialNavPage.selectReplenishmentSystem();
-	SharedDriver.pageContainer.materialNavPage.clickSiteValidateButton();
-	SharedDriver.pageContainer.materialNavPage.clickSiteSaveButton();
-	SharedDriver.pageContainer.materialNavPage.submitGlobalRequestTest();
-	SharedDriver.pageContainer.materialPage.getRequestId();
+		SharedDriver.pageContainer.materialNavPage.clickSiteNewTab();
+		SharedDriver.pageContainer.materialNavPage.clickEditSiteData();
+		SharedDriver.pageContainer.materialNavPage.clickSiteNewButton();
+		SharedDriver.pageContainer.materialNavPage.selectLocationCode();
+		SharedDriver.pageContainer.materialNavPage.selectReplenishmentSystem();
+		SharedDriver.pageContainer.materialNavPage.clickSiteValidateButton();
+		SharedDriver.pageContainer.materialNavPage.clickSiteSaveButton();
+		SharedDriver.pageContainer.materialNavPage.clickLocalAction();
+		SharedDriver.pageContainer.materialNavPage.clickSaveButton();
+		SharedDriver.pageContainer.materialNavPage.clickLocalAction();
+		SharedDriver.pageContainer.materialNavPage.submitGlobalRequestTest();
+		SharedDriver.pageContainer.materialPage.getRequestId();
 	}
 	@Test(dataProvider="Process_Information_Check",dataProviderClass=staticProviderClass.class)
 	public void Process_Information_Check(Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException 

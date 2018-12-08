@@ -59,7 +59,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Process_Information_Check_Syndication">
+	<!-- <test name="Process_Information_Check_Syndication">
 		<classes>
 			<class name="com.mendix.test.MaterialScript">
 				<methods>
@@ -67,7 +67,7 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> -->
 	<test name="HeiPort_Login_LDR_Syndication">
 		<classes>
 			<class name="com.mendix.test.LoginScript">

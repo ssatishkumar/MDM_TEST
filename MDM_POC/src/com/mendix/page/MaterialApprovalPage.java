@@ -132,7 +132,24 @@ public class MaterialApprovalPage {
 		Sync.waitForElementToBeClickable(driver, btnlocalAction);
 		Button.click("Click Local Action button", btnlocalAction);
 		Sync.waitForSeconds(Constants.WAIT_5);
+		
+		
 		return Button.jsclick("Click Approval Button", btnGDAApproval, driver);
+		
+//		Sync.waitForSeconds(Constants.WAIT_3);
+		
+		/*Actions btnselect = new Actions(driver);
+		btnselect.moveToElement(driver.findElement(By.xpath("//*[text()='Ok']")));
+		btnselect.build();
+		btnselect.perform();
+		Button.click("Click Ok Button", driver.findElement(By.xpath("//*[text()='Ok']")));
+		
+		Sync.waitForSeconds(Constants.WAIT_3);
+		Actions btnselect1 = new Actions(driver);
+		btnselect1.moveToElement(btnMsgReqIdOk);
+		btnselect1.build();
+		btnselect1.perform();
+		return Button.click("Click Ok Button", btnMsgReqIdOk);*/
 	}
 
 	public boolean submitGlobalRequest()

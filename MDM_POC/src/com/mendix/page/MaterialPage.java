@@ -16,7 +16,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.mendix.tool.Button;
 import com.mendix.tool.Constants;
@@ -200,15 +202,17 @@ public class MaterialPage {
 				driver.switchTo().window(childWindowHandle);
 			}
 		} 
+		Sync.WaitForPageLoad(driver);
 		Sync.waitForObject(driver, textMaterial);
 		Sync.waitUntilObjectDisappears(driver, "Loading Indicator", By.xpath(".//*[@id='mxui_widget_Progress_0']/div[2]"));
 		driver.manage().window().maximize();
 	}
 
 	public boolean clickMaterial(String strPageName) throws InterruptedException{
-		Sync.waitForSeconds(Constants.WAIT_6);
-		Sync.waitForSeconds(Constants.WAIT_6);
-//		Sync.waitForSeconds(Constants.WAIT_6);
+		/*Sync.waitForSeconds(Constants.WAIT_6);
+		Sync.waitForSeconds(Constants.WAIT_6);*/
+		//Sync.waitForSeconds(Constants.WAIT_6);
+		Sync.WaitForPageLoad(driver);
 		if(Button.verifyObject(textMaterial)){
 			Sync.waitForObject(driver ,"Materials", textMaterial);
 			Button.NewmouseOver("Materials", driver, textMaterial);
@@ -225,7 +229,7 @@ public class MaterialPage {
 
 		if(Button.verifyObject(menuCreate)){
 			Sync.waitForObject(driver ,"Create", menuCreate);
-			Sync.waitForSeconds(Constants.WAIT_1);		
+//			Sync.waitForSeconds(Constants.WAIT_1);		
 			return Button.click("Create", menuCreate);
 		}else{
 			return Button.click("Create", menuCreate);
@@ -234,37 +238,40 @@ public class MaterialPage {
 
 	public boolean materialTypeSelection() throws InterruptedException {
 
-		Sync.waitForSeconds(Constants.WAIT_6);
-		Sync.waitForSeconds(Constants.WAIT_3);
-		Sync.waitForObject(driver ,"Material Type Select", btnMaterialTypeSelect);
+		/*Sync.waitForSeconds(Constants.WAIT_6);
+		Sync.waitForSeconds(Constants.WAIT_3);*/
+		/*Sync.waitForObject(driver ,"Material Type Select", btnMaterialTypeSelect);
 		Sync.waitForSeconds(Constants.WAIT_6);		
-		return Button.click("Material Type Select", btnMaterialTypeSelect);
-		/*if(Button.verifyObject(btnMaterialTypeSelect)){
-			Sync.waitForObject(driver ,"Material Type Select", btnMaterialTypeSelect);
-			Sync.waitForSeconds(Constants.WAIT_3);		
+		return Button.click("Material Type Select", btnMaterialTypeSelect);*/
+		Sync.waitForObject(driver ,"Material Type Select", btnMaterialTypeSelect);
+		if(Button.verifyObject(btnMaterialTypeSelect)){
+			/*Sync.waitForObject(driver ,"Material Type Select", btnMaterialTypeSelect);
+			Sync.waitForSeconds(Constants.WAIT_3);*/		
 			return Button.click("Material Type Select", btnMaterialTypeSelect);
 		}else{
 			return Button.click("Material Type Selection", btnMaterialTypeSelect);
-		}*/
+		}
 	}
 
 	public boolean createButtonClick() throws InterruptedException {
 
-		Sync.waitForSeconds(Constants.WAIT_3);
-		Sync.waitForSeconds(Constants.WAIT_3);
-//		if(Button.verifyObject(btnCreate)){
+	/*	Sync.waitForSeconds(Constants.WAIT_3);
+		Sync.waitForSeconds(Constants.WAIT_3);*/
+		Sync.waitForObject(driver ,"Create Button Click", btnCreate);
+		if(Button.verifyObject(btnCreate)){
 			Sync.waitForObject(driver ,"Create Button Click", btnCreate);
 			Sync.waitForSeconds(Constants.WAIT_3);		
 			return Button.click("Create Button Click", btnCreate);
-//		}else{
-//			return Button.click("Create Button Click", btnCreate);
-//		}
+		}else{
+			return Button.click("Create Button Click", btnCreate);
+		}
 
 	}
 
 	public boolean disableLocaData() {
 
-		Sync.waitForSeconds(Constants.WAIT_6);
+//		Sync.waitForSeconds(Constants.WAIT_6);
+		Sync.WaitForPageLoad(driver);
 		Sync.waitUntilObjectDisappears(driver, "Waiting of Create page to Load", By.xpath(".//*[@id='mxui_widget_Progress_0']/div[2]"));
 		Sync.waitForObject(driver, textLocalData);
 		Button.click("Local Data", textLocalData);
@@ -274,7 +281,8 @@ public class MaterialPage {
 	}
 
 	public boolean materialDescCreate(String strValue) throws InterruptedException {
-		Sync.waitForSeconds(Constants.WAIT_6);
+		Sync.waitForSeconds(Constants.WAIT_2);
+		Sync.WaitForPageLoad(driver);
 		Sync.waitForObject(driver, btnEditDesc);
 		Button.jsclick("Edit Description button Click", btnEditDesc, driver);
 		Sync.waitForSeconds(Constants.WAIT_1);
@@ -286,52 +294,69 @@ public class MaterialPage {
 
 	public boolean materialGrpSelectionTest(String strValue) throws InterruptedException {
 
-		Sync.waitForSeconds(Constants.WAIT_5);
+		Sync.waitForElementToBeClickable(driver, btnMaterialGrpselection);
 		Button.jsclick("Click Material Group Selection button", btnMaterialGrpselection, driver);
-		Sync.waitForSeconds(Constants.WAIT_2);
+		Sync.waitForObject(driver, "Wait for Material Group Selection Text Box", txtboxMaterialGrpSearch);
 		Textbox.click("Enter Material Group", txtboxMaterialGrpSearch);
 		Textbox.clear("Enter Material Group", txtboxMaterialGrpSearch);
 		Textbox.enterValue("Enter Material Group", txtboxMaterialGrpSearch, strValue);
 		Button.click("Click Search Button", btnMaterialGrpSearch);
 		Button.click("Click CMG Search result", txtCMGSelect);
-		Sync.waitForSeconds(Constants.WAIT_1);
+		Sync.waitForObject(driver, "Wait for Material Group Selection Text Box", btnMaterialGroupSelect);
 		return Button.click("Click Material Group Select", btnMaterialGroupSelect);
 
 	}
 
 	public boolean grossWeightEntestTest(String strValue) {
 
-		Sync.waitForSeconds(Constants.WAIT_2);
+//		Sync.waitForSeconds(Constants.WAIT_2);
+		Sync.waitForElementToBeClickable(driver, txtBoxGrossWeightUOM);
 		Textbox.click("Click Gross Weight Base UOM", txtBoxGrossWeightUOM);
-		Sync.waitForSeconds(Constants.WAIT_1);
+//		Sync.waitForSeconds(Constants.WAIT_1);
 		Sync.waitForObject(driver, "Wait for Gross Weight Base UOM TextBox", txtBoxGrossWeightUOM);
 		return Textbox.enterValue("Enter Gross Weight Base UOM", txtBoxGrossWeightUOM, strValue);
 	}
 
 	public boolean unitOfWeightSelectionTest(String strValue) throws InterruptedException {
-		Sync.waitForSeconds(Constants.WAIT_1);
 
+		Sync.waitForElementToBeClickable(driver, btnUnitofWeight);
 		Button.click("Click Unit of Weight selecction button", btnUnitofWeight);
 		Sync.waitForObject(driver, "Wait for UOM popup", txtboxUnitofWeightInput);
 		Textbox.enterValue("Enter Unit of Weight", txtboxUnitofWeightInput, strValue);
+		Sync.waitForObject(driver, "Wait for UOM popup", btnUnitofWeightSearch);
 		Button.click("Click Search Unit of Weight button", btnUnitofWeightSearch);
-		Sync.waitForSeconds(Constants.WAIT_2);
-		driver.findElement(By.xpath("//*[text()='"+strValue+"']")).click();
+		Sync.waitForSeconds(Constants.WAIT_3);
+	   /* Sync.waitForObjectFluent(driver, driver.findElement(By.xpath("//div[@class='mx-datagrid-head-caption' and text()='Commercial Unit']/../../../../../../table[2])")));
+//		Sync.waitForElementToBeClickable(driver, driver.findElement(By.xpath("//*[text()='"+strValue+"']")));
+		
+	    Actions btnselect = new Actions(driver);
+		btnselect.moveToElement(driver.findElement(By.xpath("//*[text()='"+strValue+"']")));
+		btnselect.build();
+		btnselect.perform();
+		btnselect.click();*/
+	    
+	    
+	    driver.findElement(By.xpath("//*[text()='"+strValue+"']")).click();
 		return Button.click("Click Unit of Weight Select button", btnUnitofWeightSelect);
 
 	}
 
 	public void baseUOMSelectionTest(String strValue) throws InterruptedException {
 
-		Sync.waitForSeconds(Constants.WAIT_2);
+		Sync.waitForElementToBeClickable(driver, btnBaseUOMSelection);
 		Button.click("Click Base UOM selection button", btnBaseUOMSelection);
-		Sync.waitForSeconds(Constants.WAIT_2);
+		Sync.waitForObject(driver, "Wait for Base UOM Text Box Enter" , txtboxBaseUOM);
 		Textbox.enterValue("Enter Base UOM", txtboxBaseUOM, strValue);
-		Sync.waitForSeconds(Constants.WAIT_2);
+		Sync.waitForElementToBeClickable(driver, btnBaseUOMSearch);
 		Button.click("Click Base UOM Search button", btnBaseUOMSearch);
-		Sync.waitForSeconds(Constants.WAIT_2);
+		Sync.waitForElementToBeClickable(driver, txtBaseUOMDisplay);
 		Button.click("Click Base UOM Display", txtBaseUOMDisplay);
-		Sync.waitForSeconds(Constants.WAIT_3);
+		Sync.waitForElementToBeClickable(driver, btnBaseUOMSelect);
+		
+//		Actions act = new Actions(driver);
+//		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(child_menu));
+//		act.moveToElement(main_menu).moveToElement(child_menu).click().build().perform();
+		
 		Actions btnselect = new Actions(driver);
 		btnselect.moveToElement(btnBaseUOMSelect);
 		btnselect.build();
@@ -342,18 +367,17 @@ public class MaterialPage {
 
 	public boolean netWeightEnterTest(String strValue) throws InterruptedException {
 
-		Sync.waitForSeconds(Constants.WAIT_1);
-
+//		Sync.waitForSeconds(Constants.WAIT_1);
+		Sync.waitForElementToBeClickable(driver, txtboxNetWeight);
 		Button.click("Click Net Weight Enter TextBox", txtboxNetWeight);
-
+		
 		return Textbox.enterValue("Enter Net Weight", txtboxNetWeight, strValue);
 	}
 
 	public void uomPrimarySelectionTest() throws InterruptedException {
 
-		Sync.waitForSeconds(Constants.WAIT_2);
+		Sync.waitForObject(driver, "Wait for UOM Primary Select", slctUOMPrimary);
 		Select dropdownUOM= new Select(slctUOMPrimary);
-		Sync.waitForSeconds(Constants.WAIT_2);
 		dropdownUOM.selectByIndex(1);
 	}
 
@@ -378,6 +402,7 @@ public class MaterialPage {
 	public  String getRequestId()
 			throws InterruptedException, FileNotFoundException, IOException {
 
+		Sync.waitForSeconds(Constants.WAIT_5);
 		Sync.waitForObject(driver, "Wait of Dialog Box Success Message", msgRequestSuccess);
 		String reqId=driver.findElement(By.xpath(".//*[@id='mxui_widget_DialogMessage_0']/div[1]/div[2]/p")).getText();
 		String[] parts = reqId.split(" ");
@@ -442,9 +467,9 @@ public class MaterialPage {
 	public void advancedSearch() throws InterruptedException
 	{
 
-		TimeUnit.SECONDS.sleep(5);
+		TimeUnit.SECONDS.sleep(8);
 		driver.switchTo().window("Application");
-		TimeUnit.SECONDS.sleep(3);
+		TimeUnit.SECONDS.sleep(7);
 		Button.click("Click Advanced Search", btnAdvancedSearch);
 		TimeUnit.SECONDS.sleep(3);
 
